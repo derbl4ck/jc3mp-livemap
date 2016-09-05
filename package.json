@@ -1,0 +1,16 @@
+{
+  "name": "jc3mp-livemap",
+  "version": "1.0.0",
+  "description": "Features a livemap for nanos Just Cause 3 Multiplayer Servers",
+  "author": "Lukas 'derbl4ck' Berwanger",
+  "contributors": [],
+  "license": "MIT",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-react": "^5.2.2"
+  }
+}
