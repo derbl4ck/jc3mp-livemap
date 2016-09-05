@@ -33,7 +33,7 @@
             }).addTo(map);
 
             map.addLayer(markers);
-            const socket = io('localhost:80'); // TODO port
+            const socket = io(window.location.href);
 
             socket.on('updateMap', function(curpl) {
                 map.removeLayer(markers);
