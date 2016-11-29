@@ -44,7 +44,7 @@
                 map.addLayer(markers);
 
                 for(let i = 0; i < curpl.length; i++) {
-                    L.marker([curpl[i].y, curpl[i].x]).bindLabel(curpl[i].name, { noHide: true }).addTo(markers);
+                    L.marker([curpl[i].y + 1, curpl[i].x + 1]).bindLabel(curpl[i].name, { noHide: true }).addTo(markers);
                 }
             });
         </script>
