@@ -5,7 +5,7 @@ Features a Server package which serves a Live Map in your Browser, with all play
 
 ## Installation
 
-  - Put this package inside the package directory of your server
+  - Put this package inside the packages directory of your server
   - [optional] Change default data in _config.js_ to your own
   - Simply run your server :)
 
