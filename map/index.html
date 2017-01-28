@@ -27,7 +27,9 @@
         <script>
             let markers = new L.FeatureGroup();
 
-            let map = L.map('map').setView([-10, 30], 4);
+			let map = L.map('map', {
+				crs: L.CRS.Simple
+			}).setView([0, 0], 4);
             L.tileLayer('tiles/{z}/{x}/{y}.jpg', {
                 attribution: 'JC3MP livemap &copy; <a href="https://derbl4ck.com">derbl4ck</a>',
                 maxZoom: 6,
@@ -44,7 +46,14 @@
                 map.addLayer(markers);
 
                 for(let i = 0; i < curpl.length; i++) {
-                    L.marker([curpl[i].y + 1, curpl[i].x + 1]).bindLabel(curpl[i].name, { noHide: true }).addTo(markers);
+
+                    let lat = curpl[i].y;
+                    let lng = curpl[i].x;
+                    let s = 0.78111749;
+				    lat = (lat * s) - 128;
+				    lng = (lng * s) + 128;
+
+                    L.marker([lat, lng]).bindLabel(curpl[i].name, { noHide: true }).addTo(markers);
                 }
             });
         </script>

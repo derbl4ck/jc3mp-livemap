@@ -32,13 +32,7 @@ const interval = setInterval(() => {
     const curpl = [];
     
     for (let i = 0; i < jcmp.players.length; i++) {
-        /**
-         * Note
-         * 
-         * X value is working perfectly
-         * Y value only works with max Zoom level (6)
-         */
-        curpl.push({name: jcmp.players[i].name, x: Math.floor(jcmp.players[i].position.x)/120, y: (-(Math.floor(jcmp.players[i].position.z)/80))});
+        curpl.push({name: jcmp.players[i].name, x: (jcmp.players[i].position.x / 100), y: (-(jcmp.players[i].position.z / 100))});
     }
 
     io.emit('updateMap', curpl);
